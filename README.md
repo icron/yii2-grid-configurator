@@ -70,16 +70,37 @@ For example:
      return $this->render('grid', [
           'configurator' => $configurator,
      ]);
-    
-     //View grid.php:
-    
-      GridView::widget($configurator->getGridViewConfig([
-          'filterPosition' => GridView::FILTER_POS_OFF,
-          'dataProvider' => new ActiveDataProvider($configurator->getActiveDataProviderConfig([
-              'pagination' => [
-                  'pageSize' => 5,
-              ],
-          ])),
-     ]));
- 
+     
  ```
+ 
+View grid.php:
+ ```     
+   GridView::widget($configurator->getGridViewConfig([
+       'filterPosition' => GridView::FILTER_POS_OFF,
+       'dataProvider' => new ActiveDataProvider($configurator->getActiveDataProviderConfig([
+           'pagination' => [
+               'pageSize' => 5,
+           ],
+       ])),
+  ]));
+```
+
+Extended filters:
+```
+    $filterModel = $configurator->getFilterModel();
+    $form->field($filterModel, 'epc')->textInput();
+    $form->field($filterModel, 'salary')->range([
+       'clientOptions' => [
+           'min' => 0,
+           'max' => 5000,
+           'from' => 1000,
+           'to' => 4000,
+           'type' => 'double',
+           'step' => 1,
+           'prefix' => "$",
+           'prettify' => false,
+           'hasGrid' => true
+       ],
+    ]);
+
+```
