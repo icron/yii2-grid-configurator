@@ -1,0 +1,15 @@
+{
+    "name": "icron/yii2-grid-configurator",
+    "description": "Yii2 Grid Configurator",
+    "keywords": ["yii", "grid", "configurator"],
+    "type": "yii2-extension",
+    "license": "BSD",
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "icron\\configurator\\": ""
+        }
+    }
+}
