@@ -19,7 +19,7 @@ use yii\helpers\Inflector;
  *  - sorting columns
  *  - freeze columns
  *  - visibility of columns (depending on the visible columns, an appropriate SQL query)
- *  - filters columns (using DynamicModel, you can use )
+ *  - filters columns (using DynamicModel)
  *  - custom page size
  * In short, adjust general configuration file for all columns:
  *  - rules(for filters)

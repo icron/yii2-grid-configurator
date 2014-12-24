@@ -5,7 +5,7 @@ Server-side implementation of the extended grid, which has a number of features:
   - sorting columns
   - freeze columns
   - visibility of columns (depending on the visible columns, an appropriate SQL query)
-  - filters columns (using DynamicModel, you can use )
+  - filters columns (using DynamicModel)
   - custom page size
   
 In short, adjust general configuration file for all columns:
